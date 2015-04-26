@@ -16,75 +16,64 @@ private:
 public:
 	queue()
 	{
-		schet = 1;
-		T *queuePrt;
+		schet = 0;
 		queuePrt = new T[schet];
 	}
 	void dob(const T& el)
 	{
 		T put = el;
-		if (queuePrt = NULL)
+		if (schet==0)
 		{
+			schet++;
 			queuePrt[0] = put;
 		}
 		else
 		{
 			T*nenyjno;
 			schet++;
-			nenyjno = new T[schet];
-			for (int i = 0; i < schet; i++)
+			nenyjno = new T[schet-1];
+			nenyjno[schet-1] = put;
+			for (int i = 0; i < schet-1 ; i++)
 			{
 				nenyjno[i] = queuePrt[i];
 			}
-			nenyjno[schet] = put;
-			delete[] queuePrt;
-			T*queuePrt;
-			queuePrt = new  T[schet];
-			for (int i = 0; i < schet + 1; i++)
-			{
-				queuePrt[i] = nenyjno[i];
-			}
-			delete[] nenyjno;
-			cout << "Элемент в очереди";
+			queuePrt = new T[schet-1];
+			queuePrt = nenyjno;
+			cout << "Элемент в очереди" << queuePrt[schet-1] << endl;
+			
 		}
 	}
-	
+
 	T take()
 	{
 		T* nenyjno;
 		begin = queuePrt[0];
-		nenyjno = new T[schet-1]
-			for (int i = 0; i < schet; i++)
-		{
-			nenyjno[i] = queuePrt[i+1]
-		}
+		nenyjno = new T[schet - 1]
+			for (int i = 1; i < schet; i++)
+			{
+			nenyjno[i - 1] = queuePrt[i]
+			}
 		schet--;
-		delete[] queuePrt;
-		T*queuePrt;
-		for (int i = 0; i < schet + 1; i++)
-		{
-			queuePrt[i] = nenyjno[i];
-		}
-		delete[] nenyjno;
-		cout << "Первый выбыл";
+		queuePrt = new  T[schet];
+		queuePrt = nenyjno;
+		cout << "Первый выбыл" << endl;
 		return begin;
 	}
 
 	T get(int i) const
 	{
-		T nawe;
+		
 		int por = i;//порядок
-		nawe = queuePrt[por];
-		cout << "Найдена очередь: " << nawe;
-		return nawe;
+		 cout << "Найдена очередь: " << queuePrt[por] << endl;
+		return por;
 	}
 
 	int size() const
 	{
-		cout <<"Размер очереди: "<< schet;
+		cout << "Размер очереди: " << schet << endl;
 		return schet;
 	}
-	
+
 	T dqueue()
 	{
 		delete[] queuePtr;
