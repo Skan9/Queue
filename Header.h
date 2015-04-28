@@ -14,11 +14,13 @@ private:
 	T*queuePrt;
 	int schet;
 public:
+	//O(1)
 	queue()
 	{
 		schet = 0;
 		queuePrt = new T[schet];
 	}
+	//O(N)
 	void dob(const T& el)
 	{
 		T put = el;
@@ -43,7 +45,7 @@ public:
 			
 		}
 	}
-
+	//O(N)
 	T take()
 	{
 		T* nenyjno;
@@ -59,7 +61,7 @@ public:
 		cout << "Первый выбыл" << endl;
 		return begin;
 	}
-
+	//O(N)
 	T get(int i) const
 	{
 		
@@ -67,13 +69,13 @@ public:
 		 cout << "Найдена очередь: " << queuePrt[por] << endl;
 		return por;
 	}
-
+	//O(1)
 	int size() const
 	{
 		cout << "Размер очереди: " << schet << endl;
 		return schet;
 	}
-
+	//O(1)
 	T dqueue()
 	{
 		delete[] queuePtr;
