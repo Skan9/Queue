@@ -41,7 +41,7 @@ public:
 			}
 			queuePrt = new T[schet-1];
 			queuePrt = nenyjno;
-			cout << "Ýëåìåíò â î÷åðåäè" << queuePrt[schet-1] << endl;
+			cout << "ÃÃ«Ã¥Ã¬Ã¥Ã­Ã² Ã¢ Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨" << queuePrt[schet-1] << endl;
 			
 		}
 	}
@@ -58,21 +58,21 @@ public:
 		schet--;
 		queuePrt = new  T[schet];
 		queuePrt = nenyjno;
-		cout << "Ïåðâûé âûáûë" << endl;
+		cout << "ÃÃ¥Ã°Ã¢Ã»Ã© Ã¢Ã»Ã¡Ã»Ã«" << endl;
 		return begin;
 	}
-	//O(N)
+	//O(1)
 	T get(int i) const
 	{
 		
-		int por = i;//ïîðÿäîê
-		 cout << "Íàéäåíà î÷åðåäü: " << queuePrt[por] << endl;
+		int por = i;//Ã¯Ã®Ã°Ã¿Ã¤Ã®Ãª
+		 cout << "ÃÃ Ã©Ã¤Ã¥Ã­Ã  Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¼: " << queuePrt[por] << endl;
 		return por;
 	}
 	//O(1)
 	int size() const
 	{
-		cout << "Ðàçìåð î÷åðåäè: " << schet << endl;
+		cout << "ÃÃ Ã§Ã¬Ã¥Ã° Ã®Ã·Ã¥Ã°Ã¥Ã¤Ã¨: " << schet << endl;
 		return schet;
 	}
 	//O(1)
