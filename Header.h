@@ -49,6 +49,7 @@ public:
 	T take()
 	{
 		T* nenyjno;
+		int begin;
 		begin = queuePrt[0];
 		nenyjno = new T[schet - 1]
 			for (int i = 1; i < schet; i++)
