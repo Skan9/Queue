@@ -66,8 +66,10 @@ public:
 	{
 		
 		int por = i;//ïîðÿäîê
-		 cout << "Íàéäåíà î÷åðåäü: " << queuePrt[por] << endl;
-		return por;
+		T nawe;//?
+		nawe=queuePrt[por];//?
+		cout << "Íàéäåíà î÷åðåäü: " << nawe << endl;
+		return nawe;
 	}
 	//O(1)
 	int size() const
