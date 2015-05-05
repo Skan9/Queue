@@ -24,7 +24,7 @@ public:
 	void dob(const T& el)
 	{
 		T put = el;
-		if (schet==1)
+		if (schet == 1)
 		{
 			schet++;
 			queuePrt[0] = put;
@@ -33,14 +33,15 @@ public:
 		{
 			T*nenyjno;
 			schet++;
-			nenyjno = new T[schet-1];
-			nenyjno[schet-1] = put;
-			for (int i = 0; i < schet-1 ; i++)
+			nenyjno = new T[schet - 1];
+			nenyjno[schet - 1] = put;
+			for (int i = 0; i < schet - 1; i++)
 			{
 				nenyjno[i] = queuePrt[i];
 			}
 			queuePrt = nenyjno;
-			
+			delete[] nenyjno;
+
 		}
 	}
 	//O(N)
@@ -56,6 +57,7 @@ public:
 			}
 		schet--;
 		queuePrt = nenyjno;
+		delete[] nenyjno;
 		return begin;
 	}
 	//O(1)
@@ -66,7 +68,7 @@ public:
 	//O(1)
 	int size() const
 	{
-		schet--
+		schet--;
 		return schet;
 	}
 	//O(1)
