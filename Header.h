@@ -17,14 +17,14 @@ public:
 	//O(1)
 	queue()
 	{
-		schet = 0;
+		schet = 1;
 		queuePrt = new T[schet];
 	}
 	//O(N)
 	void dob(const T& el)
 	{
 		T put = el;
-		if (schet==0)
+		if (schet==1)
 		{
 			schet++;
 			queuePrt[0] = put;
@@ -39,9 +39,7 @@ public:
 			{
 				nenyjno[i] = queuePrt[i];
 			}
-			queuePrt = new T[schet-1];
 			queuePrt = nenyjno;
-			cout << "Ýëåìåíò â î÷åðåäè" << queuePrt[schet-1] << endl;
 			
 		}
 	}
@@ -57,25 +55,18 @@ public:
 			nenyjno[i - 1] = queuePrt[i]
 			}
 		schet--;
-		queuePrt = new  T[schet];
 		queuePrt = nenyjno;
-		cout << "Ïåðâûé âûáûë" << endl;
 		return begin;
 	}
 	//O(1)
 	T get(int i) const
 	{
-		
-		int por = i;//ïîðÿäîê
-		T nawe;//?
-		nawe=queuePrt[por];//?
-		cout << "Íàéäåíà î÷åðåäü: " << nawe << endl;
-		return nawe;
+		return queuePrt[i];
 	}
 	//O(1)
 	int size() const
 	{
-		cout << "Ðàçìåð î÷åðåäè: " << schet << endl;
+		schet--
 		return schet;
 	}
 	//O(1)
