@@ -72,7 +72,7 @@ public:
 		return schet;
 	}
 	//O(1)
-	T dqueue()
+	wqueue()
 	{
 		delete[] queuePtr;
 	}
